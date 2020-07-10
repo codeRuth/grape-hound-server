@@ -14,7 +14,7 @@ def test():
 
 @app.route('/process', methods=["POST"])
 def process():
-    print(request.body())
+    print(request.data)
     return jsonify({"message": "Successful"})
 
 
