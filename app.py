@@ -1,6 +1,4 @@
-"""Flask App Project."""
-
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 
@@ -13,6 +11,11 @@ def index():
 @app.route('/test')
 def test():
     return jsonify({"message": "Hello World, Testing"})
+
+@app.route('/process', methods=["POST"])
+def process():
+    print(request.body())
+    return jsonify({"message": request.body()})
 
 
 if __name__ == '__main__':
