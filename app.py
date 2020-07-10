@@ -15,7 +15,7 @@ def test():
 @app.route('/process', methods=["POST"])
 def process():
     print(request.body())
-    return jsonify({"message": request.body()})
+    return jsonify({"message": "Successful"})
 
 
 if __name__ == '__main__':
