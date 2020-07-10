@@ -10,6 +10,10 @@ def index():
     json_data = {'Hello': 'World!'}
     return jsonify(json_data)
 
+@app.route('/test')
+def test():
+    return jsonify({"message": "Hello World, Testing"})
+
 
 if __name__ == '__main__':
     app.run()
