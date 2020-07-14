@@ -1,6 +1,6 @@
 import json
 from flask import Flask, jsonify, request
-from src.prediction import predict_disease
+# from src.prediction import predict_disease
 
 app = Flask(__name__)
 
@@ -28,9 +28,3 @@ def process():
     # with open(os.path.join(os.path.dirname(__file__) + FILE_UPLOAD_DIR, file_name + ".png"), 'wb+') as f:
     #     f.write(image)
     return jsonify({"image": image_data})
-
-
-if __name__ == '__main__':
-    # app.run(host="0.0.0.0", debug = True)
-    # print(os.path.join("./uploads/48964b70121a4122ba03ca147685a864.png"))
-    predict_disease()
